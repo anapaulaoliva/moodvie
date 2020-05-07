@@ -69,7 +69,7 @@ const Landing = () => {
 			});
 		} else {
 			randomSelected().then( (response) => {
-				console.log(response);
+				//console.log(response);
 				setSliderData(response);
 			}).catch((error) => {
 				console.error(error);
