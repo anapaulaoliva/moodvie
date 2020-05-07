@@ -1,10 +1,22 @@
 import React from 'react';
-import DetailView from './views/DetailView';
-import MockView from './views/MockView';
+import {
+	Route, Redirect, Switch,
+	BrowserRouter as Router,
+} from 'react-router-dom';
+import { Result, LandingView } from './views';
+
+
+
 function App() {
 
   return (
-      <MockView/>
+      <Router>
+        <Switch>
+			<Route exact path="/" component={LandingView} />
+			<Route exact path="/result" component={Result} />
+			<Redirect to="/" />
+        </Switch>
+      </Router>
   );
 }
 
